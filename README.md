@@ -51,10 +51,10 @@ This project is a RESTful API for managing student and teacher data, user authen
 6. Create the required database tables using SQL script: [database.sql](https://github.com/varshamohan08/student-management/blob/main/database.sql).
 
 ## Endpoints
-#### Authentication Routes
-1. Register User
-   Endpoint: auth/register/<user_type>
-   Method: POST
+### Authentication Routes
+#### 1. Register User
+   Endpoint: `auth/register/<user_type>`<br>
+   Method: POST<br>
    Body:
    ```
    {
@@ -64,23 +64,24 @@ This project is a RESTful API for managing student and teacher data, user authen
    }
    ```
    User Types: student, teacher
-2. Login User
-   Endpoint: auth/login/<user_type>
-   Method: POST
+#### 2. Login User
+   Endpoint: `auth/login/<user_type>`<br>
+   Method: POST<br>
    Body:
    ```
    {
     "email": "john.doe@example.com",
     "password": "password123"
    }
-#### Student Routes
-3. View Students
-   Endpoint: students/
-   Method: GET
+   ```
+### Student Routes
+#### 3. View Students
+   Endpoint: `students/`<br>
+   Method: GET<br>
    Authorization: Bearer token required
-4. Add Student
-   Endpoint: students/add
-   Method: POST
+#### 4. Add Student
+   Endpoint: `students/add`<br>
+   Method: POST<br>
    Body:
    ```
    {
@@ -90,9 +91,9 @@ This project is a RESTful API for managing student and teacher data, user authen
    }
    ```
    Authorization: Bearer token required
-5. Update Student
-   Endpoint: students/update/<student_id>
-   Method: PUT
+#### 5. Update Student
+   Endpoint: `students/update/<student_id>`<br>
+   Method: PUT<br>
    Body:
    ```
    {
@@ -100,13 +101,13 @@ This project is a RESTful API for managing student and teacher data, user authen
    }
    ```
    Authorization: Bearer token required
-6. Delete Student
-   Endpoint: students/delete/<student_id>
-   Method: DELETE
+#### 6. Delete Student
+   Endpoint: `students/delete/<student_id>`<br>
+   Method: DELETE<br>
    Authorization: Bearer token required
-7. Assign Teacher to Student
-   Endpoint: students/<student_id>/teachers
-   Method: POST
+#### 7. Assign Teacher to Student
+   Endpoint: `students/<student_id>/teachers`<br>
+   Method: POST<br>
    Body:
    ```
    {
