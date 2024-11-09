@@ -53,7 +53,7 @@ This project is a RESTful API for managing student and teacher data, user authen
 ## Endpoints
 #### Authentication Routes
 1. Register User
-   Endpoint: /register/<user_type>
+   Endpoint: auth/register/<user_type>
    Method: POST
    Body:
    ```
@@ -65,7 +65,7 @@ This project is a RESTful API for managing student and teacher data, user authen
    ```
    User Types: student, teacher
 2. Login User
-   Endpoint: /login/<user_type>
+   Endpoint: auth/login/<user_type>
    Method: POST
    Body:
    ```
@@ -75,11 +75,11 @@ This project is a RESTful API for managing student and teacher data, user authen
    }
 #### Student Routes
 3. View Students
-   Endpoint: /
+   Endpoint: students/
    Method: GET
    Authorization: Bearer token required
 4. Add Student
-   Endpoint: /add
+   Endpoint: students/add
    Method: POST
    Body:
    ```
@@ -91,7 +91,7 @@ This project is a RESTful API for managing student and teacher data, user authen
    ```
    Authorization: Bearer token required
 5. Update Student
-   Endpoint: /update/<student_id>
+   Endpoint: students/update/<student_id>
    Method: PUT
    Body:
    ```
@@ -101,11 +101,11 @@ This project is a RESTful API for managing student and teacher data, user authen
    ```
    Authorization: Bearer token required
 6. Delete Student
-   Endpoint: /delete/<student_id>
+   Endpoint: students/delete/<student_id>
    Method: DELETE
    Authorization: Bearer token required
 7. Assign Teacher to Student
-   Endpoint: /assign_teacher
+   Endpoint: students/<student_id>/teachers
    Method: POST
    Body:
    ```
